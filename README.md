@@ -1,5 +1,7 @@
 # PDF Watermarker
 
+This project was developed as part of a coding assessment for an interview at Tesla.
+
 PDF Watermarker is a Node.js + Express project for adding watermarks to PDF files.
 For the sake of testing and convenience, a simple frontend UI has also been implemented, 
 which is located in the `.\client` directory.\
