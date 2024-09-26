@@ -1,0 +1,25 @@
+<div class="pdf-form">
+  <h2 class="header">Add a Watermark to your PDF File</h2>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" enctype="multipart/form-data" id="form" class="validate">
+    <div class="form-field">
+      <label for="pdfFile">Select a PDF file:</label>
+      <input type="file" id="pdfFile" (change)="onFileSelected($event)">
+    </div>
+    <div class="form-field">
+      <label for="watermarkText">Watermark Text:</label>
+      <input name="watermark" ngModel type="text" id="watermarkText">
+    </div>
+    <div class="form-field">
+      <button type="submit">Add Watermark</button>
+    </div>
+  </form>
+</div>
+<div class="response-wrapper">
+  <div class="response-result" *ngIf="errorMessage && errorCode !== -1">
+    <p>Error Code: {{errorCode}}</p>
+    <pre><p>{{errorMessage | json}}</p></pre>
+  </div>
+</div>
+
+
+

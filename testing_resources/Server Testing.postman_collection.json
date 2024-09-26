@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "020a9bc4-7db8-4aab-a2c3-ef4a37125bec",
+		"name": "Server Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pdfFile",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "watermarkText",
+							"value": "    ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/pdf/watermark",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pdf",
+						"watermark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pdfFile",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "watermarkText",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pdf-marker-backend.azurewebsites.net/api/pdf/watermark",
+					"protocol": "https",
+					"host": [
+						"pdf-marker-backend",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"pdf",
+						"watermark"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

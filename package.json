@@ -1,0 +1,26 @@
+{
+  "name": "pdfwatermarker",
+  "version": "1.0.0",
+  "description": "Web Service for adding watermarks to PDF Documents",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "install:all": "npm install && npm --prefix client install",
+    "start:all": "concurrently \"npm run server\" \"npm run client\""
+
+  },
+  "author": "Gordei Vikhliaev <gordei2002@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.1",
+    "express-validator": "^7.0.1",
+    "nodemon": "^3.0.1",
+    "pdf-lib": "^1.17.1",
+    "uuid": "^9.0.1"
+  }
+}
